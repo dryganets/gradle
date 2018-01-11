@@ -58,8 +58,9 @@ public class DefaultConfigurationMetadata implements ConfigurationMetadata, Vari
     protected DefaultConfigurationMetadata(ModuleComponentIdentifier componentId, String name, boolean transitive, boolean visible,
                                            ImmutableList<String> hierarchy, ImmutableList<? extends ModuleComponentArtifactMetadata> artifacts,
                                            VariantMetadataRules componentMetadataRules,
-                                           ImmutableList<ExcludeMetadata> excludes) {
-        this(componentId, name, transitive, visible, hierarchy, artifacts, componentMetadataRules, excludes, ImmutableAttributes.EMPTY, null);
+                                           ImmutableList<ExcludeMetadata> excludes,
+                                           ImmutableAttributes attributes) {
+        this(componentId, name, transitive, visible, hierarchy, artifacts, componentMetadataRules, excludes, attributes, null);
     }
 
     private DefaultConfigurationMetadata(ModuleComponentIdentifier componentId, String name, boolean transitive, boolean visible,
